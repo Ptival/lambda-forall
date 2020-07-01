@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<!--
+    Type on Strap jekyll theme v2.2.4
+    Copyright 2016-2019 Sylhare
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+    <script defer src="/lambda-forall/assets/js/main.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/lambda-forall/assets/css/main.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/lambda-forall/assets/favicon.ico" type="image/x-icon">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="http://localhost:4000/lambda-forall/topics/lambda-calculus-syntax">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="Lambda Forall" href="http://localhost:4000/lambda-forall/feed.xml"/>
+
+    
+
+    <!-- KaTeX 0.8.3 -->
+    <!-- if you have any issue check https://github.com/KaTeX/KaTeX -->
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+        <script>
+         document.addEventListener("DOMContentLoaded", function() {
+             renderMathInElement(document.body);
+         });
+        </script>
+    
+
+    <!-- Google Analytics -->
+    
+
+    <!-- seo tags -->
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Lambda calculus: Syntax | Lambda Forall</title>
+<meta name="generator" content="Jekyll v4.0.1" />
+<meta property="og:title" content="Lambda calculus: Syntax" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Type on Strap uses KaTeX to display maths. Equations such as \(S_n = a \times \frac{1-r^n}{1-r}\) can be displayed inline." />
+<meta property="og:description" content="Type on Strap uses KaTeX to display maths. Equations such as \(S_n = a \times \frac{1-r^n}{1-r}\) can be displayed inline." />
+<link rel="canonical" href="http://localhost:4000/lambda-forall/topics/lambda-calculus-syntax" />
+<meta property="og:url" content="http://localhost:4000/lambda-forall/topics/lambda-calculus-syntax" />
+<meta property="og:site_name" content="Lambda Forall" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-07-01T20:33:45+02:00" />
+<script type="application/ld+json">
+{"description":"Type on Strap uses KaTeX to display maths. Equations such as \\(S_n = a \\times \\frac{1-r^n}{1-r}\\) can be displayed inline.","headline":"Lambda calculus: Syntax","dateModified":"2020-07-01T20:33:45+02:00","datePublished":"2020-07-01T20:33:45+02:00","url":"http://localhost:4000/lambda-forall/topics/lambda-calculus-syntax","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/lambda-forall/topics/lambda-calculus-syntax"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta property="og:image" content="http://localhost:4000/lambda-forall/assets/img/pexels/triangular.jpeg " />
+</head>
+
+  <body>
+    <header class="site-header">
+
+    <!-- Logo and title -->
+	<div class="branding">
+        
+		<a href="/lambda-forall/">
+			<img alt="logo img" class="avatar" src="/lambda-forall/assets/img/triangle.png" />
+		</a>
+        
+
+		<h1 class="site-title">
+			<a aria-label="Lambda Forall" href="/lambda-forall/">
+        Lambda Forall
+      </a>
+		</h1>
+	</div>
+
+    <!-- Toggle menu -->
+    <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#">
+    <i class="fa fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
+        
+
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="About" title="About" href="/lambda-forall/about/">
+                     About 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Search" title="Search" href="/lambda-forall/search/">
+                     <i class="fa fa-search" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Tags" title="Tags" href="/lambda-forall/tags/">
+                     <i class="fa fa-tags" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+    </ul>
+
+	</nav>
+</header>
+
+    <div class="content">
+      <article class="feature-image" >
+  <header id="main" style="">
+    <div class="title-padder">
+      
+      <h1 id="Lambda+calculus%3A+Syntax" class="title">Lambda calculus: Syntax</h1>
+      <!-- 
+
+
+<div class="post-info">
+    <p class="meta">
+      July 1, 2020
+    </p></div>
+ -->
+      
+    </div>
+  </header>
+
+  <section class="post-content">
+  
+      <p>Type on Strap uses KaTeX to display maths. Equations such as \(S_n = a \times \frac{1-r^n}{1-r}\) can be displayed inline.</p>
+
+<p>Alternatively, they can be shown on a new line:</p>
+
+\[f(x) = \int \frac{2x^2+4x+6}{x-2}\]
+
+\[e^{i\theta}=\cos(\theta)+i\sin(\theta)\]
+
+<h1 id="prerequisites">Prerequisites</h1>
+
+<p>Type math within a sentence \(2x^2 + x + c\) to display inline.</p>
+
+<p>For display math typesetting, type your math expression on a new line. For example:</p>
+
+\[\bar{y} = {1 \over n} \sum_{i = 1}^{n}y_i\]
+
+\[% \f is defined as f(#1) using the macro
+\f{x} = \int_{-\infty}^\infty
+    \hat \f\xi\,e^{2 \pi i \xi x}
+    \,d\xi\]
+
+<p>When (a \ne 0), there are two solutions to (ax^2 + bx + c = 0) and they are
+[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.]</p>
+
+\[f(x)=x^2\]
+
+\[a \rightarrow b\]
+
+<ul>
+  <li>None!  Well, let’s be honest, it will help if you have some basic notions of
+mathematics or programming.  But if not, proceed anyway and ask questions
+around!</li>
+</ul>
+
+<hr />
+
+<div class="row rowItem"><div class="grow"></div><div class="column moogle moggy">
+<p>Hi Mogster!</p>
+
+<p>I was wondering, what’s the smallest usable programming language!?</p>
+</div><img class="moogle moggy" src="/lambda-forall/assets/img/moggy.png" /></div>
+
+<div class="row rowItem"><img class="moogle mogster" src="/lambda-forall/assets/img/mogster.png" /><div class="column moogle mogster">
+<p>Hello Moggy!</p>
+
+<p>It depends on your purpose, but maybe I can describe to you a human-friendly,
+minimal system, that is powerful enough to describe any computation.</p>
+</div><div class="grow"></div></div>
+
+<div class="row rowItem"><div class="grow"></div><div class="column moogle moggy">
+<p>Sounds great!  So, I was thinking, there must be some sort of procedures, or
+functions, no?</p>
+</div><img class="moogle moggy" src="/lambda-forall/assets/img/moggy.png" /></div>
+
+<div class="row rowItem"><img class="moogle mogster" src="/lambda-forall/assets/img/mogster.png" /><div class="column moogle mogster">
+<p>Indeed, one capacity we would want in a language is that of expressing some
+relationship between an <em>input</em> and an <em>output</em>.  Let us get to the essence of
+this concept.</p>
+
+<p>Such a function would need to receive some input, and do something with it,
+right?  How would we talk about something that we don’t have yet, but will
+receive somehow?</p>
+</div><div class="grow"></div></div>
+
+<div class="row rowItem"><div class="grow"></div><div class="column moogle moggy">
+<p>Is this what <strong>variables</strong> are for?</p>
+</div><img class="moogle moggy" src="/lambda-forall/assets/img/moggy.png" /></div>
+
+<div class="row rowItem"><img class="moogle mogster" src="/lambda-forall/assets/img/mogster.png" /><div class="column moogle mogster">
+<p>Yes it is.  A <strong>variable</strong> is a name we can use to refer to something.  So our
+language could let us define functions by giving a name to its input, and
+describing its output as some expression of our language.  We call this an
+<strong>abstraction</strong>.</p>
+</div><div class="grow"></div></div>
+
+<div class="row rowItem"><div class="grow"></div><div class="column moogle moggy">
+<p>Abstraction!?  This seems pretty concrete to me… what are we abstracting?</p>
+</div><img class="moogle moggy" src="/lambda-forall/assets/img/moggy.png" /></div>
+
+<div class="row rowItem"><img class="moogle mogster" src="/lambda-forall/assets/img/mogster.png" /><div class="column moogle mogster">
+<p>Think about it this way: when you define a function, you describe what happens
+to some input.  The code of the function is talking about what happens to its
+input, even though the input is abstract.</p>
+</div><div class="grow"></div></div>
+
+<div class="row rowItem"><div class="grow"></div><div class="column moogle moggy">
+<p>I see.  So when we call the function with an actual value, it’s as if suddenly
+we are making a concrete copy of this abstraction?</p>
+</div><img class="moogle moggy" src="/lambda-forall/assets/img/moggy.png" /></div>
+
+<div class="row rowItem"><img class="moogle mogster" src="/lambda-forall/assets/img/mogster.png" /><div class="column moogle mogster">
+<p>In some way, yes!  And this leads us to the second thing we need in our
+language: some way to <strong>concretize</strong> an abstraction, or, as you said, of calling
+a function.
+A function call is comprised of the function being called, and the argument
+being passed.  To keep things as simple as possible, let’s just say that any
+expression in our language is a good candidate for being either a function to be
+called, or an argument to be passed to a function.</p>
+</div><div class="grow"></div></div>
+
+<div class="row rowItem"><div class="grow"></div><div class="column moogle moggy">
+<p>Wow, wait a second!  There are two things here that bug me.  Shouldn’t we only
+have functions be called?  What if the expression is not a function!?</p>
+</div><img class="moogle moggy" src="/lambda-forall/assets/img/moggy.png" /></div>
+
+<div class="row rowItem"><img class="moogle mogster" src="/lambda-forall/assets/img/mogster.png" /><div class="column moogle mogster">
+<p>Well, I could be cheeky and point out that, so far, everything in our language
+is a function, isn’t it?  If we were to add expressions to our language that are
+not functions, this might indeed become a pressing concern.  But I’ll show you
+techniques to avoid such issues when they arise.</p>
+</div><div class="grow"></div></div>
+
+<div class="row rowItem"><div class="grow"></div><div class="column moogle moggy">
+<p>Hmmm, if you say so.  So for now, we just assume anything can be “called”,
+whatever that means.  But I still have another concern: you said we can pass any
+expression as an argument to a function.  Shouldn’t the argument be… some
+data?  It would be weird to pass a function as an argument to another function!</p>
+</div><img class="moogle moggy" src="/lambda-forall/assets/img/moggy.png" /></div>
+
+<div class="row rowItem"><img class="moogle mogster" src="/lambda-forall/assets/img/mogster.png" /><div class="column moogle mogster">
+<p>Not at all!  As long as the callee</p>
+</div><div class="grow"></div></div>
+
+<div class="row rowItem"><div class="grow"></div><div class="column moogle moggy">
+<p>TODO \(a \rightarrow b\)</p>
+</div><img class="moogle moggy" src="/lambda-forall/assets/img/moggy.png" /></div>
+
+<div class="row rowItem"><img class="moogle mogster" src="/lambda-forall/assets/img/mogster.png" /><div class="column moogle mogster">
+<p>TODO</p>
+</div><div class="grow"></div></div>
+
+<div class="row rowItem"><div class="grow"></div><div class="column moogle moggy">
+<p>TODO</p>
+</div><img class="moogle moggy" src="/lambda-forall/assets/img/moggy.png" /></div>
+
+<div class="row rowItem"><img class="moogle mogster" src="/lambda-forall/assets/img/mogster.png" /><div class="column moogle mogster">
+<p>TODO</p>
+</div><div class="grow"></div></div>
+
+<div class="row rowItem"><div class="grow"></div><div class="column moogle moggy">
+<p>TODO</p>
+</div><img class="moogle moggy" src="/lambda-forall/assets/img/moggy.png" /></div>
+
+<div class="row rowItem"><img class="moogle mogster" src="/lambda-forall/assets/img/mogster.png" /><div class="column moogle mogster">
+<p>TODO</p>
+</div><div class="grow"></div></div>
+
+<div class="row rowItem"><div class="grow"></div><div class="column moogle moggy">
+<p>TODO</p>
+</div><img class="moogle moggy" src="/lambda-forall/assets/img/moggy.png" /></div>
+
+<div class="row rowItem"><img class="moogle mogster" src="/lambda-forall/assets/img/mogster.png" /><div class="column moogle mogster">
+<p>TODO</p>
+</div><div class="grow"></div></div>
+
+<div class="row rowItem"><div class="grow"></div><div class="column moogle moggy">
+<p>TODO</p>
+</div><img class="moogle moggy" src="/lambda-forall/assets/img/moggy.png" /></div>
+
+<div class="row rowItem"><img class="moogle mogster" src="/lambda-forall/assets/img/mogster.png" /><div class="column moogle mogster">
+<p>TODO</p>
+</div><div class="grow"></div></div>
+
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="n">putStrLn</span> <span class="s">"Hello"</span></code></pre></figure>
+
+
+    
+  </section>
+
+  <!-- Social media shares -->
+  
+
+<div class="share-buttons">
+    <ul class="share-buttons">
+        <div class="meta">Share</div>
+        
+        <li>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Flambda-forall%2Ftopics%2Flambda-calculus-syntax" target="_blank" title=" Facebook">
+			<i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on Facebook</span>
+		</a>
+        </li>
+         
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=Lambda+calculus%3A+Syntax%20http%3A%2F%2Flocalhost%3A4000%2Flambda-forall%2Ftopics%2Flambda-calculus-syntax" target="_blank" title="">
+			<i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Tweet</span>
+		</a>
+        </li>
+            
+        <li>
+            <a href="http://www.reddit.com/submit?url=http://localhost:4000/lambda-forall/topics/lambda-calculus-syntax&title=Lambda+calculus%3A+Syntax%20%7C%20Lambda+Forall" target="_blank" title=" Reddit">
+			<i class="fa fa-reddit-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on Reddit</span>
+		</a>
+        </li>
+           
+        <li>
+            <a href="mailto:?subject=Lambda+calculus%3A+Syntax%20%7C%20Lambda+Forall&body=:%20http://localhost:4000/lambda-forall/topics/lambda-calculus-syntax" target="_blank" title="">
+			<i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Email</span>
+		</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+
+   <!-- Tag list -->
+  
+  
+
+
+<footer>
+  <div class="tag-list">
+    
+      <div class="meta">Tag</div>
+    
+
+    
+    <a class="button" href="/lambda-forall/tags#Lambda+calculus">
+      <p><i class="fa fa-tag fa-fw"></i> Lambda calculus</p>
+    </a>
+    
+  </div>
+</footer>
+
+
+
+</article>
+
+<!-- Disqus -->
+
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+    
+
+    
+</div>
+
+
+
+<!-- To change color of links in the page -->
+<style>
+  
+  .feature-image a { color: MediumPurple !important; }
+  div#post-nav a { color: MediumPurple !important; }
+  footer a { color: MediumPurple !important; }
+  .site-header nav a:hover {  color: MediumPurple !important; }
+  header#main { background-color: MediumPurple !important; }
+  
+
+  header#main {
+    background-repeat:no-repeat;
+  background-image: url('/lambda-forall/assets/img/lineart.png');  
+  }
+</style>
+
+    </div>
+    <footer class="site-footer">
+    <p class="text">
+        Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
+</p>
+            <div class="footer-icons">
+                <ul>
+                <!-- Social icons from Font Awesome, if enabled -->
+                
+<li>
+    <a feed.xml href="feed.xml"
+       title="Follow RSS feed">
+        <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a href="https://github.com/sylhare" title="Follow on GitHub">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </ul>
+            </div>
+</footer>
+
+
+
+  </body>
+</html>
